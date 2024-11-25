@@ -1,0 +1,356 @@
+/* General Reset */
+body, html {
+	font-family: "Courier New", Courier, monospace;
+	margin: 0;
+	padding: 0;
+	background-color: #fdfdfd;
+	color: black;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+/* Header */
+header {
+	background-color: #000;
+	color: #407ab8;
+	padding: 1rem;
+	text-align: center;
+	font-size: 2rem;
+	text-transform: uppercase;
+	border-bottom: 4px solid #407ab8;
+	position: relative;
+}
+/* Main Section */
+main {
+	width: 100%;
+	padding: 2rem;
+	max-width: 1400px;
+	margin: 0 auto;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+/* Section Wrappers */
+section {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	background-color: #fff;
+	border: 4px solid black;
+	box-shadow: 5px 5px 0 black;
+}
+/* Headings */
+h2 {
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid black;
+	padding-bottom: 0.5rem;
+}
+/* Dropdown Container */
+.dropdown-container {
+	display: flex;
+	gap: 1rem;
+	font-size: 1rem;
+}
+/* Dropdowns */
+select {
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 2px solid black;
+	background: #f4f4f4;
+	color: black;
+	cursor: pointer;
+}
+/* Buttons */
+button {
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.75rem 1.5rem;
+	margin: 0;
+	border: 2px solid black;
+	background-color: #407ab8;
+	color: black;
+	cursor: pointer;
+	text-transform: uppercase;
+	width: 100%;
+}
+button:hover {
+	background-color: #000;
+	color: #407ab8;
+	transition: 0.3s;
+}
+/* Matrices Container */
+#matrices-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	margin-top: 2rem;
+	height: auto;
+}
+/* Matrix Wrapper */
+.matrix-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1 1 auto;
+	padding: 1rem;
+	border: 2px solid black;
+	background-color: #e0e0e0;
+	box-shadow: 5px 5px 0 black;
+}
+/* Operation Buttons */
+#operation-buttons {
+	flex: 0 1 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem;
+	background-color: #f4f4f4;
+	border: 2px solid black;
+	box-shadow: 5px 5px 0 black;
+	height: 100%;
+}
+/* Input Fields */
+input[type="number"], input[type="text"] {
+	width: 40px;
+	height: 40px;
+	font-size: 1rem;
+	border: 2px solid black;
+	text-align: center;
+	background-color: #fff;
+	color: black;
+}
+/* Results Section */
+#results-container {
+	padding: 1rem;
+	border: 4px solid black;
+	background-color: #fff;
+	box-shadow: 5px 5px 0 black;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}
+/* Footer */
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	left: 0;
+	font-size: 1rem;
+	width: 100%;
+	border-top: 4px solid #407ab8;
+	bottom: 0;
+	position: relative;
+	margin-top: auto;
+}
+footer a {
+	color: #407ab8;
+	text-decoration: none;
+	font-weight: bold;
+}
+footer a:hover {
+	text-decoration: underline;
+}
+.alert-box {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #e0e0e0;
+	color: black;
+	padding: 2rem;
+	border: 2px solid black;
+	box-shadow: 5px 5px 0 black;
+	z-index: 1000;
+	width: 300px;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.alert-box.show {
+	display: block;
+}
+/* Ensure the alert box is hidden by default */
+.alert-box:not(.show) {
+	display: none;
+}
+.alert-box .alert-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	color: black;
+}
+.alert-box .close-btn {
+	background-color: #000;
+	color: #407ab8;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	margin: 1rem auto 0 auto;
+	width: fit-content;
+	position: relative;
+}
+.alert-box .close-btn:hover {
+	background-color: #407ab8;
+	color: #000;
+}
+.predefined-buttons {
+	display: flex;
+	justify-content: center;
+}
+.predefined-buttons button {
+	flex: 1;
+	padding: 1rem;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+}
+/* Dark Mode Toggle Button */
+#toggle-dark-mode {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background-color: transparent;
+	border: none;
+	color: #407ab8;
+	font-size: 1.5rem;
+	padding: 0.2rem 0.5rem;
+	cursor: pointer;
+	width: auto;
+}
+#toggle-dark-mode:hover {
+	color: #fff;
+}
+/* Dark Mode Styles */
+.dark-mode #toggle-dark-mode {
+	color: #fff;
+}
+.dark-mode #toggle-dark-mode:hover {
+	color: #555;
+}
+.dark-mode {
+	background-color: #141414;
+	color: #fff;
+	border-color: #555;
+}
+.dark-mode header,.dark-mode footer{
+	background-color: #0e0e0e;
+	color: #fff;
+	border-color: #c1c1c1;
+}
+.dark-mode h2 {
+	border-color: #c1c1c1;
+}
+.dark-mode section{
+	background-color: #1c1c1c;
+	color: #fff;
+	border-color: #c1c1c1;
+	box-shadow: 5px 5px 0 #c9c9c9;
+}
+.dark-mode button,.dark-mode input,.dark-mode select,.dark-mode .alert-box {
+	background-color: #1c1c1c;
+	color: #fff;
+	border-color: #c1c1c1;
+}
+.dark-mode button:hover {
+	background-color: #555;
+	color: #fff;
+}
+.dark-mode .matrix-wrapper,.dark-mode #operation-buttons,.dark-mode #results-container {
+	background-color: #202020;
+	border-color: #6d6d6d;
+	box-shadow: 5px 5px 0 #6d6d6d;
+}
+.dark-mode .alert-box {
+	background-color: #444;
+	color: #fff;
+	border-color: #555;
+	box-shadow: 5px 5px 0 #5a5959;
+}
+.dark-mode .alert-box .alert-title {
+	color: #fff;
+}
+.dark-mode .alert-box .close-btn {
+	background-color: #1c1c1c;
+	color: #fff;
+	border: 2px solid #c1c1c1;
+}
+.dark-mode .alert-box .close-btn:hover {
+	background-color: #555;
+	color: #fff;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+	header {
+		font-size: 1.5rem;
+		padding: 0.5rem;
+	}
+	main {
+		padding: 1rem;
+	}
+	section {
+		width: 90%;
+		margin: 1rem auto;
+		margin-right: 8%;
+		padding: 1rem;
+		box-sizing: border-box;
+	}
+	.matrix-wrapper {
+		flex: 1 1 100%;
+		padding: 0.5rem;
+		box-shadow: 3px 3px 0 black;
+	}
+	#matrices-container {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.matrix-buttons button {
+		height: 50px;
+		font-size: 0.875rem;
+		padding: 0.5rem 1rem;
+	}
+	.predefined-buttons {
+		flex-direction: row;
+	}
+	#operation-buttons {
+		flex-direction: row;
+		justify-content: center;
+		gap: 1rem;
+	}
+	#operation-buttons button {
+		flex: 1;
+		font-size: 0.875rem;
+	}
+	footer {
+		font-size: 0.875rem;
+		padding: 0.5rem;
+	}
+}
+@media (max-width: 480px) {
+	header {
+		font-size: 1.25rem;
+	}
+	section {
+		width: 95%;
+		margin: 1rem auto;
+	}
+	.matrix-wrapper {
+		width: 100%;
+	}
+	button {
+		font-size: 0.75rem;
+	}
+	#results-container {
+		font-size: 1rem;
+		padding: 0.5rem;
+	}
+}
